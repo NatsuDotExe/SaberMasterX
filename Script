@@ -1,0 +1,378 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local _SaberUI_ = Instance.new("ScreenGui")
+local OuterFrame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local InnerFrame = Instance.new("Frame")
+local UICorner_2 = Instance.new("UICorner")
+local Title = Instance.new("TextLabel")
+local Button1 = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local Button2 = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+local Button3 = Instance.new("TextButton")
+local UICorner_5 = Instance.new("UICorner")
+local Button4 = Instance.new("TextButton")
+local UICorner_6 = Instance.new("UICorner")
+local Button5 = Instance.new("TextButton")
+local UICorner_7 = Instance.new("UICorner")
+local Button6 = Instance.new("TextButton")
+local UICorner_8 = Instance.new("UICorner")
+local CloseButton = Instance.new("TextButton")
+local UICorner_9 = Instance.new("UICorner")
+local y,n = true,false
+_G.AutoSwing = n
+_G.AutoBuySwords = n
+_G.AutoBuyDNA = n
+_G.AutoBuyClasses = n
+_G.AutoBuyBoosts = n
+_G.AutoBuySkills = n
+--Properties:
+
+_SaberUI_.Name = "_SaberUI_"
+_SaberUI_.Enabled = true
+_SaberUI_.Parent = game.CoreGui
+_SaberUI_.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+OuterFrame.Name = "OuterFrame"
+OuterFrame.Parent = _SaberUI_
+OuterFrame.BackgroundColor3 = Color3.fromRGB(42, 42, 42)
+OuterFrame.Position = UDim2.new(0.0370084792, 0, 0.473684192, 0)
+OuterFrame.Size = UDim2.new(0, 408, 0, 279)
+OuterFrame.ZIndex = 100
+
+UICorner.CornerRadius = UDim.new(0, 15)
+UICorner.Parent = OuterFrame
+
+InnerFrame.Name = "InnerFrame"
+InnerFrame.Parent = OuterFrame
+InnerFrame.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
+InnerFrame.Position = UDim2.new(0.029655531, 0, 0.0471609235, 0)
+InnerFrame.Size = UDim2.new(0, 385, 0, 253)
+
+UICorner_2.CornerRadius = UDim.new(0, 15)
+UICorner_2.Parent = InnerFrame
+
+Title.Name = "Title"
+Title.Parent = InnerFrame
+Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title.BackgroundTransparency = 1.000
+Title.Position = UDim2.new(0.0337662324, 0, 0.0395256914, 0)
+Title.Size = UDim2.new(0, 358, 0, 27)
+Title.Font = Enum.Font.FredokaOne
+Title.Text = "Natsu's Saber Master X UI"
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.TextScaled = true
+Title.TextSize = 14.000
+Title.TextStrokeColor3 = Color3.fromRGB(255, 135, 135)
+Title.TextStrokeTransparency = 0.000
+Title.TextWrapped = true
+
+Button1.Name = "Button1"
+Button1.Parent = InnerFrame
+Button1.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
+Button1.Position = UDim2.new(0.0337662324, 0, 0.810276687, 0)
+Button1.Size = UDim2.new(0, 143, 0, 39)
+Button1.Font = Enum.Font.FredokaOne
+Button1.Text = "Auto Swing: Off"
+Button1.TextColor3 = Color3.fromRGB(255, 255, 255)
+Button1.TextScaled = true
+Button1.TextSize = 20.000
+Button1.TextStrokeColor3 = Color3.fromRGB(255, 156, 156)
+Button1.TextStrokeTransparency = 0.000
+Button1.TextWrapped = true
+
+Button1.MouseButton1Click:Connect(function()
+	if _G.AutoSwing == n then
+		_G.AutoSwing = y
+		Button1.Text = 'Auto Swing: On'
+	else
+		if _G.AutoSwing == y then
+			_G.AutoSwing = n
+			Button1.Text = 'Auto Swing: Off'
+		end
+	end
+end)
+
+UICorner_3.CornerRadius = UDim.new(0, 30)
+UICorner_3.Parent = Button1
+
+Button2.Name = "Button2"
+Button2.Parent = InnerFrame
+Button2.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
+Button2.Position = UDim2.new(0.592207789, 0, 0.810276687, 0)
+Button2.Size = UDim2.new(0, 143, 0, 39)
+Button2.Font = Enum.Font.FredokaOne
+Button2.Text = "Auto Buy Swords: Off"
+Button2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Button2.TextScaled = true
+Button2.TextSize = 20.000
+Button2.TextStrokeColor3 = Color3.fromRGB(255, 156, 156)
+Button2.TextStrokeTransparency = 0.000
+Button2.TextWrapped = true
+
+Button2.MouseButton1Click:Connect(function()
+	if _G.AutoBuySwords == n then
+		_G.AutoBuySwords = y
+		Button2.Text = 'Auto Buy Swords: On'
+	else
+		if _G.AutoBuySwords == y then
+			_G.AutoBuySwords = n
+			Button2.Text = 'Auto Buy Swords: Off'
+		end
+	end
+end)
+
+UICorner_4.CornerRadius = UDim.new(0, 30)
+UICorner_4.Parent = Button2
+
+Button3.Name = "Button3"
+Button3.Parent = InnerFrame
+Button3.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
+Button3.Position = UDim2.new(0.592207789, 0, 0.584980249, 0)
+Button3.Size = UDim2.new(0, 143, 0, 39)
+Button3.Font = Enum.Font.FredokaOne
+Button3.Text = "Auto Buy DNA: Off"
+Button3.TextColor3 = Color3.fromRGB(255, 255, 255)
+Button3.TextScaled = true
+Button3.TextSize = 20.000
+Button3.TextStrokeColor3 = Color3.fromRGB(255, 156, 156)
+Button3.TextStrokeTransparency = 0.000
+Button3.TextWrapped = true
+
+Button3.MouseButton1Click:Connect(function()
+	if _G.AutoBuyDNA == n then
+		_G.AutoBuyDNA = y
+		Button3.Text = 'Auto Buy DNA: On'
+	else
+		if _G.AutoBuyDNA == y then
+			_G.AutoBuyDNA = n
+			Button3.Text = 'Auto Buy DNA: Off'
+		end
+	end
+end)
+
+UICorner_5.CornerRadius = UDim.new(0, 30)
+UICorner_5.Parent = Button3
+
+Button4.Name = "Button4"
+Button4.Parent = InnerFrame
+Button4.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
+Button4.Position = UDim2.new(0.0337662101, 0, 0.584980249, 0)
+Button4.Size = UDim2.new(0, 143, 0, 39)
+Button4.Font = Enum.Font.FredokaOne
+Button4.Text = "Auto Buy Classes: Off"
+Button4.TextColor3 = Color3.fromRGB(255, 255, 255)
+Button4.TextScaled = true
+Button4.TextSize = 20.000
+Button4.TextStrokeColor3 = Color3.fromRGB(255, 156, 156)
+Button4.TextStrokeTransparency = 0.000
+Button4.TextWrapped = true
+
+Button4.MouseButton1Click:Connect(function()
+	if _G.AutoBuyClasses == n then
+		_G.AutoBuyClasses = y
+		Button4.Text = 'Auto Buy Classes: On'
+	else
+		if _G.AutoBuyClasses == y then
+			_G.AutoBuyClasses = n
+			Button4.Text = 'Auto Buy Classes: Off'
+		end
+	end
+end)
+
+UICorner_6.CornerRadius = UDim.new(0, 30)
+UICorner_6.Parent = Button4
+
+Button5.Name = "Button5"
+Button5.Parent = InnerFrame
+Button5.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
+Button5.Position = UDim2.new(0.0337662101, 0, 0.355731249, 0)
+Button5.Size = UDim2.new(0, 143, 0, 39)
+Button5.Font = Enum.Font.FredokaOne
+Button5.Text = "Auto Buy Boosts: Off"
+Button5.TextColor3 = Color3.fromRGB(255, 255, 255)
+Button5.TextScaled = true
+Button5.TextSize = 20.000
+Button5.TextStrokeColor3 = Color3.fromRGB(255, 156, 156)
+Button5.TextStrokeTransparency = 0.000
+Button5.TextWrapped = true
+
+Button5.MouseButton1Click:Connect(function()
+	if _G.AutoBuyBoosts == n then
+		_G.AutoBuyBoosts = y
+		Button5.Text = 'Auto Buy Boosts: On'
+	else
+		if _G.AutoBuyBoosts == y then
+			_G.AutoBuyBoosts = n
+			Button5.Text = 'Auto Buy Boosts: Off'
+		end
+	end
+end)
+
+UICorner_7.CornerRadius = UDim.new(0, 30)
+UICorner_7.Parent = Button5
+
+Button6.Name = "Button6"
+Button6.Parent = InnerFrame
+Button6.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
+Button6.Position = UDim2.new(0.592207789, 0, 0.355731249, 0)
+Button6.Size = UDim2.new(0, 143, 0, 39)
+Button6.Font = Enum.Font.FredokaOne
+Button6.Text = "Auto Buy Skills: Off"
+Button6.TextColor3 = Color3.fromRGB(255, 255, 255)
+Button6.TextScaled = true
+Button6.TextSize = 20.000
+Button6.TextStrokeColor3 = Color3.fromRGB(255, 156, 156)
+Button6.TextStrokeTransparency = 0.000
+Button6.TextWrapped = true
+
+Button6.MouseButton1Click:Connect(function()
+	if _G.AutoBuySkills == n then
+		_G.AutoBuySkills = y
+		Button6.Text = 'Auto Buy Skills: On'
+	else
+		if _G.AutoBuySkills == y then
+			_G.AutoBuySkills = n
+			Button6.Text = 'Auto Buy Skills: Off'
+		end
+	end
+end)
+
+UICorner_8.CornerRadius = UDim.new(0, 30)
+UICorner_8.Parent = Button6
+
+CloseButton.Name = "CloseButton"
+CloseButton.Parent = OuterFrame
+CloseButton.BackgroundColor3 = Color3.fromRGB(42, 42, 42)
+CloseButton.BorderSizePixel = 0
+CloseButton.Position = UDim2.new(0.377451003, 0, -0.0716845915, 0)
+CloseButton.Size = UDim2.new(0, 99, 0, 20)
+CloseButton.Font = Enum.Font.FredokaOne
+CloseButton.Text = "CLOSE"
+CloseButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+CloseButton.TextScaled = true
+CloseButton.TextSize = 14.000
+CloseButton.TextStrokeColor3 = Color3.fromRGB(255, 0, 0)
+CloseButton.TextStrokeTransparency = 0.000
+CloseButton.TextWrapped = true
+
+CloseButton.MouseButton1Click:Connect(function()
+	_SaberUI_:Destroy()
+end)
+
+UICorner_9.CornerRadius = UDim.new(0, 100)
+UICorner_9.Parent = CloseButton
+
+--https://www.roblox.com/games/6723827949
+--Make sure to Credit Natsu Dragneel#7615
+
+local plr= game.Players.LocalPlayer
+local root= plr.Character.HumanoidRootPart
+local m = require(game:GetService("ReplicatedStorage").Modules.Sword.ToolStats)
+local classes = require(game:GetService("ReplicatedStorage").Modules.Sword.ClassStats)
+local swords = plr.Swords
+
+while wait() do
+	if _G.AutoSwing == y then
+		for i,v in pairs(swords:GetChildren()) do
+
+			for i,v2 in pairs(m.ToolStats) do
+				if m.ToolStats[''..v.Name].Strength > v2.Strength then
+					print('is greater: '..m.ToolStats[''..v.Name].Strength)
+					local args = {
+						[1] = ""..v.Name
+					}
+
+					game:GetService("ReplicatedStorage").Modules.Events.Sword:FireServer(unpack(args))
+				else
+					if i == v.Name and v2.Strength > m.ToolStats[''..v.Name].Strength then
+						print('is greater: '..v2.Strength)
+						local args = {
+							[1] = ""..i
+						}
+
+						game:GetService("ReplicatedStorage").Modules.Events.Sword:FireServer(unpack(args))
+					end
+				end
+			end
+		end
+	end
+
+	if _G.AutoBuySwords == y then
+		local args = {
+			[1] = "Sword",
+			[2] = "Sword",
+			[3] = "BuyAll"
+		}
+
+		game:GetService("ReplicatedStorage").Modules.Events.BuyItem:InvokeServer(unpack(args))
+
+	end
+
+	if _G.AutoBuyDNA == y then
+		local args = {
+			[1] = "Backpack",
+			[2] = "Backpack",
+			[3] = "BuyAll"
+		}
+
+		game:GetService("ReplicatedStorage").Modules.Events.BuyItem:InvokeServer(unpack(args))
+	end
+
+	if _G.AutoBuyClasses == y then
+		for i2,v2 in pairs(classes.Classes) do
+			local args = {
+				[1] = ""..i2,
+				[2] = "Class",
+				[3] = "Buy"
+			}
+
+			game:GetService("ReplicatedStorage").Modules.Events.BuyItem:InvokeServer(unpack(args))
+		end
+	end
+
+	if _G.AutoBuyBoosts == y then
+		local args = {
+			[1] = "AutoSellBoost",
+			[2] = 1
+		}
+
+		game:GetService("ReplicatedStorage").Modules.Events.BuyBoostForGems:InvokeServer(unpack(args))
+
+		local args = {
+			[1] = "LuckBoost",
+			[2] = 1
+		}
+
+		game:GetService("ReplicatedStorage").Modules.Events.BuyBoostForGems:InvokeServer(unpack(args))
+
+		local args = {
+			[1] = "GemBoost",
+			[2] = 1
+		}
+
+		game:GetService("ReplicatedStorage").Modules.Events.BuyBoostForGems:InvokeServer(unpack(args))
+
+		local args = {
+			[1] = "CoinBoost",
+			[2] = 1
+		}
+
+		game:GetService("ReplicatedStorage").Modules.Events.BuyBoostForGems:InvokeServer(unpack(args))
+
+		_G.AutoBuyBoosts = n
+	end
+
+	if _G.AutoBuySkills == y then
+		local args = {
+			[1] = "Skill",
+			[2] = "BuyAll"
+		}
+
+		game:GetService("ReplicatedStorage").Modules.Events.BuySkill:InvokeServer(unpack(args)) 
+	end
+end
